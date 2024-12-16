@@ -36,6 +36,9 @@ function applyTheme(theme) {
     if (theme === "dark") {
         document.body.classList.add("dark-mode");
         document.body.classList.remove("light-mode");
+    } else if (window.matchMedia('(display-mode: standalone)').matches) {
+        document.body.classList.add("light-mode");
+        document.body.classList.remove("dark-mode");
     } else {
         document.body.classList.add("light-mode");
         document.body.classList.remove("dark-mode");
