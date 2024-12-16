@@ -1,0 +1,99 @@
+
+body{
+    font-family: "Jost","Noto Sans JP",sans-serif;
+    color: black;
+    background-color: white;
+    opacity: 0;
+}
+p{
+    position: relative;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+}
+.progress-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    color: black;
+    background-color: rgb(245, 245, 245);
+    font-size: .9em;
+    height: 20px;
+    border-bottom-right-radius: 10px;
+    width: 14.285714285714285%;
+    transition: 1s;
+    text-align: center;
+}
+.dark-mode .progress-bar{
+    color: white;
+    background-color: rgb(50, 50, 50);
+}
+.progress-icons{
+    position: fixed;
+    right: 5px;
+    top: 5px;
+}
+.progress-icons span{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    float: left;
+    border: 3px black solid;
+    border-radius: 20px;
+    background-color: transparent;
+}
+.btns{
+    position: fixed;
+    text-align: center;
+    width: 100vw;
+    bottom: 50px;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.btns button{
+    position: relative;
+    border: black 2px solid;
+    text-align: center;
+    border-radius: 25px;
+    color: black;
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    transition: 1s;
+    opacity: 1;
+}
+.input{
+    font-family: "Jost","Noto Sans JP",sans-serif;
+    border: black 2px solid;
+    border-radius: 25px;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 0;
+    height: 50px;
+    width: 200px;
+    font-size: .9em;
+    text-align: center;
+    outline: none;
+}
+.credit{
+    position: fixed;
+    bottom: 10px;
+    text-align: center;
+    opacity: .2;
+    right: 10px;
+    user-select: none;
+}
+span{
+    display: inline-block;
+}
+#answernumber{
+    transition: 2s;
+    opacity: 0;
+}
+[type="number"]::-webkit-outer-spin-button, 
+[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
