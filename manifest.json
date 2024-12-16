@@ -3,6 +3,6 @@
     "short_name": "Magic",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone",
+    "display": "fullscreen",
     "start_url": "https://i026.github.io/math/"
   }
