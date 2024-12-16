@@ -2,7 +2,7 @@
 body{
     font-family: "Jost","Noto Sans JP",sans-serif;
     color: black;
-    background-color: rgb(245, 245, 245);
+    background-color: white;
     opacity: 0;
 }
 p{
@@ -17,9 +17,10 @@ p{
     left: 0;
     opacity: 0;
     color: black;
-    background-color: white;
+    background-color: rgb(245, 245, 245);
     font-size: .9em;
     height: 20px;
+    border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 14.285714285714285%;
     transition: 1s;

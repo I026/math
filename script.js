@@ -26,7 +26,8 @@ function update_progress_bar(progress_bar_index) {
                 progress_bar.style.borderRadius = "0";
             }, 500)
         } else {
-            progress_bar.style.borderBottomRightRadius = "25px";
+            progress_bar.style.borderTopRightRadius = "10px";
+            progress_bar.style.borderBottomRightRadius = "10px";
         }
     console.log(`progress_bar_%: ${progress_bar_percentage}`);
     console.log(`currentIndex: ${currentIndex}`);
