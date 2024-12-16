@@ -5,6 +5,10 @@ body{
     background-color: white;
     opacity: 0;
 }
+.dark-mode{
+    color: white;
+    background-color: black;
+}
 p{
     position: relative;
     text-align: center;
@@ -17,7 +21,7 @@ p{
     left: 0;
     opacity: 0;
     color: black;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(215, 215, 215);
     font-size: .9em;
     height: 20px;
     border-top-right-radius: 10px;
@@ -28,21 +32,7 @@ p{
 }
 .dark-mode .progress-bar{
     color: white;
-    background-color: rgb(50, 50, 50);
-}
-.progress-icons{
-    position: fixed;
-    right: 5px;
-    top: 5px;
-}
-.progress-icons span{
-    width: 20px;
-    height: 20px;
-    margin-left: 5px;
-    float: left;
-    border: 3px black solid;
-    border-radius: 20px;
-    background-color: transparent;
+    background-color: rgb(40, 40, 40);
 }
 .btns{
     position: fixed;
@@ -65,6 +55,10 @@ p{
     transition: 1s;
     opacity: 1;
 }
+.dark-mode .btns button{
+    border-color: white;
+    color: white;
+}
 .input{
     font-family: "Jost","Noto Sans JP",sans-serif;
     border: black 2px solid;
@@ -78,6 +72,10 @@ p{
     text-align: center;
     outline: none;
 }
+.dark-mode .input{
+    border-color: white;
+    color: white;
+}
 .credit{
     position: fixed;
     bottom: 10px;
@@ -86,7 +84,14 @@ p{
     right: 10px;
     user-select: none;
 }
-span{
+.theme-switch{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transition: 1s;
+    user-select: none;
+}
+p span{
     display: inline-block;
 }
 #answernumber{

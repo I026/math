@@ -4,6 +4,7 @@ const txt = document.getElementById("txt");
 const btns = document.getElementById("btns");
 const next_btn = document.getElementById("next_btn");
 const progress_bar = document.getElementById("progress_bar");
+const themeSwitch = document.getElementById("themeSwitch");
 const texts = [
     "2桁の<span>いずれかの数字を</span><span>1つ思い浮かべて､</span><span>紙に書いてください｡</span>",
     "それに5を<span>足し､</span>",
@@ -33,16 +34,15 @@ function update_progress_bar(progress_bar_index) {
     console.log(`currentIndex: ${currentIndex}`);
 };
 
+let themeToggle = 0;
+
 function applyTheme(theme) {
     if (theme === "dark") {
         document.body.classList.add("dark-mode");
-        document.body.classList.remove("light-mode");
-    } else if (window.matchMedia('(display-mode: standalone)').matches) {
-        document.body.classList.add("light-mode");
-        document.body.classList.remove("dark-mode");
+        themeToggle = 1;
     } else {
-        document.body.classList.add("light-mode");
         document.body.classList.remove("dark-mode");
+        themeToggle = 0;
     }
 };
 
@@ -56,6 +56,17 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (ev
     applyTheme(newTheme);
 });
 
+themeSwitch.addEventListener("click", (event) => {
+    if (themeToggle == 0) {
+        document.body.classList.add("dark-mode");
+        themeToggle = 1;
+    } else {
+        document.body.classList.remove("dark-mode");
+        themeToggle = 0;
+    }
+    console.log(themeToggle);
+});
+
 applyTheme(detectTheme());
 
 let lastMousePosition = { x: 0, y: 0 };
@@ -67,6 +78,7 @@ txt.style.transition = "1s";
 btns.style.transition = "1s";
 next_btn.disabled = true;
 btns.style.opacity = "0";
+themeSwitch.style.opacity = "0";
 update_progress_bar(currentIndex + 1);
 
 html.addEventListener("mousemove", (event) => {
@@ -92,6 +104,7 @@ setTimeout(() => {
     txt.style.top = "calc(50vh - 5em)";
     next_btn.disabled = false;
     btns.style.opacity = "1";
+    themeSwitch.style.opacity = "1";
 }, 1100);
 
 function next() {
