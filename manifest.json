@@ -4,5 +4,6 @@
     "theme_color": "#000000",
     "background_color": "#000000",
     "display": "fullscreen",
-    "start_url": "https://i026.github.io/math/"
+    "orientation": "natural",
+    "start_url": "math/"
   }
